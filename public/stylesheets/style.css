@@ -1,3 +1,7 @@
+.contain-to-grid,
+.contain-to-grid .top-bar {
+  background: #009668;
+}
 .contain-to-grid .tabs .tab-title {
-  width: 33.3%;
+  width: 33.333%;
 }
