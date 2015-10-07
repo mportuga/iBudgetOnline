@@ -6,8 +6,21 @@ html
     title= title
     link(rel='stylesheet', href='/stylesheets/foundation.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
-    script(src='javascripts/vendor/custom.modernizr.js')
+    script(src='javascripts/vendor/modernizr.js')
   body
+    div(class='contain-to-grid sticky')
+      nav(class='top-bar', data-topbar, role='navigation')
+        ul(class='title-area')
+          li(class='name')
+            h1
+              a(href='/') BugetTail Online
+      ul(class='tabs', role='tablist')
+        li(class='tab-title', role='presentation')
+          a(href='#summary',role='tab',tabindex='0',aria-selected='true') Summary
+        li(class='tab-title', role='presentation')
+          a(href='#accounts',role='tab',tabindex='0',aria-selected='true') Accounts
+        li(class='tab-title', role='presentation')
+          a(href='#budget',role='tab',tabindex='0',aria-selected='true') Budget
     main(role='main')
       block content
     script(src='javascripts/vendor/jquery.js')
