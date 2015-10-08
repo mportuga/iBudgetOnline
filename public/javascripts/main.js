@@ -1,1 +1,3 @@
-$(document).foundation();
+$(document).foundation().ready(function(){
+  $("#appNav li[data-path='" + window.location.pathname + "']").addClass('active');
+});

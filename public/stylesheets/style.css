@@ -1,7 +1,21 @@
+body {
+  min-width: 320px;
+}
 .contain-to-grid,
 .contain-to-grid .top-bar {
   background: #009668;
 }
 .contain-to-grid .tabs .tab-title {
   width: 33.333%;
+}
+.contain-to-grid .tabs .tab-title h2 {
+      font-size: 1rem;
+}
+.side-nav .title > h3 {
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.side-nav > .side-nav {
+  padding: 0;
 }

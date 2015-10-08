@@ -14,13 +14,16 @@ html
           li(class='name')
             h1
               a(href='/') BugetTail Online
-      ul(class='tabs', role='tablist')
-        li(class='tab-title active', role='presentation')
-          a(href='#summary',role='tab',tabindex='0',aria-selected='true') Summary
-        li(class='tab-title', role='presentation')
-          a(href='#accounts',role='tab',tabindex='0',aria-selected='true') Accounts
-        li(class='tab-title', role='presentation')
-          a(href='#budget',role='tab',tabindex='0',aria-selected='true') Budget
+      ul(id='appNav', class='tabs', role='tablist')
+        li(class='tab-title', role='presentation', data-path='/summary')
+          a(href='/summary',role='tab',tabindex='0',aria-selected='true')
+            h2 Summary
+        li(class='tab-title', role='presentation', data-path='/accounts')
+          a(href='/accounts',role='tab',tabindex='0',aria-selected='true')
+            h2 Accounts
+        li(class='tab-title', role='presentation', data-path='/budget')
+          a(href='/budget',role='tab',tabindex='0',aria-selected='true')
+            h2 Budget
     main(role='main')
       block content
     script(src='javascripts/vendor/jquery.js')

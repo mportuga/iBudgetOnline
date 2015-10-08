@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  div(class='row')
+    div(class='small-12 medium-4 columns')
+      nav(id='accountsNav')
+        ul(class='side-nav')
+          li(class='title')
+            h3 Checking
+          li(class='divider')
+          ul(class='side-nav', data-category='checking')
+            li
+              a(href='#') Demo Checking
+                span(class='balance right') $0.00
+          li(class='title')
+            h3 Savings
+          li(class='divider')
+          ul(class='side-nav', data-category='savings')
+            li
+              a(href='#') Demo Savings
+                span(class='balance right') $0.00
+          li(class='title')
+            h3 Credit
+          li(class='divider')
+          ul(class='side-nav', data-category='credit')
+            li
+              a(href='#') Demo Credit
+                span(class='balance right') $0.00
