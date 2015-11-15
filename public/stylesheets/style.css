@@ -1,16 +1,67 @@
+/* Layout Styles */
 body {
   min-width: 320px;
 }
 .contain-to-grid,
 .contain-to-grid .top-bar {
-  background: #009668;
+  background: #039BE5;
+}
+.contain-to-grid .top-bar .budget-icon {
+  margin-right: 5px;
+  height: 35px;
+}
+.contain-to-grid .top-bar .name h1 a {
+  font-weight: bold;
 }
 .contain-to-grid .tabs .tab-title {
   width: 33.333%;
 }
+.contain-to-grid .tabs .tab-title > a {
+  background-color: #222;
+}
+.contain-to-grid .tabs .tab-title > a:hover,
+.contain-to-grid .tabs .tab-title.active > a {
+  background-color: #090909;
+}
 .contain-to-grid .tabs .tab-title h2 {
       font-size: 1rem;
+      color: #fff;
 }
+/* Summary Page */
+.tile-container {
+  border: 1px solid #E0E0E0;
+  margin: 10px 0;
+}
+.tile-container .tile-header {
+  background-color: #E0E0E0;
+  height: 30px;
+}
+.tile-container .tile-header h3 {
+  color: #fff;
+  font-size: 1rem;
+  line-height: 30px;
+  padding: 0 10px;
+  margin: 0;
+}
+#categories.tile-container {
+  border-color: #FF6D00;
+}
+#categories.tile-container .tile-header {
+  background-color: #FF6D00;
+}
+#payees.tile-container {
+  border-color: #D50000;
+}
+#payees.tile-container .tile-header {
+  background-color: #D50000;
+}
+#budgetSummary.tile-container {
+  border-color: #6200EA;
+}
+#budgetSummary.tile-container .tile-header {
+  background-color: #6200EA;
+}
+/* Accounts Page */
 .side-nav .title > h3 {
   font-size: 0.9rem;
   font-weight: 500;

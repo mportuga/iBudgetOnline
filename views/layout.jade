@@ -5,6 +5,7 @@ html
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     title= title
     link(rel='stylesheet', href='/stylesheets/foundation.min.css')
+    link(rel='stylesheet', href='/stylesheets/nv.d3.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
     script(src='javascripts/vendor/modernizr.js')
   body
@@ -13,7 +14,9 @@ html
         ul(class='title-area')
           li(class='name')
             h1
-              a(href='/') BugetTail Online
+              a(href='/')
+                img(src='images/budgetTailLogo.png', class='budget-icon')
+                span BugetTail Online
       ul(id='appNav', class='tabs', role='tablist')
         li(class='tab-title', role='presentation', data-path='/summary')
           a(href='/summary',role='tab',tabindex='0',aria-selected='true')
@@ -28,4 +31,5 @@ html
       block content
     script(src='javascripts/vendor/jquery.js')
     script(src='javascripts/foundation/foundation.js')
+    block scripts
     script(src='javascripts/main.js')
