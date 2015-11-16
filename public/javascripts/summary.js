@@ -1,96 +1,67 @@
-function stream_index(d, i) {
+function convertDates(obj){
+  return {
+    month: new Date(obj.date).getMonth(),
+    value: obj.value
+  };
+}
+
+function generateMonthObj(month, val) {
+  return {x: month + "'15", y: val };
+}
+
+function generateExpenseReport(data){
   var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-  return {x: months[i] + "'15", y: Math.max(0, d)};
-}
-
-/* Inspired by Lee Byron's test data generator. */
-function stream_layers(n, m, o) {
-  if (arguments.length < 3) o = 0;
-  function bump(a) {
-    var x = 1 / (.1 + Math.random()),
-        y = 2 * Math.random() - .5,
-        z = 10 / (.1 + Math.random());
-    for (var i = 0; i < m; i++) {
-      var w = (i / m - y) * z;
-      a[i] += 500 * (x * Math.exp(-w * w));
-    }
-  }
-  return d3.range(n).map(function() {
-      var a = [], i;
-      for (i = 0; i < m; i++) a[i] = o + o * Math.random();
-      for (i = 0; i < 5; i++) bump(a);
-      return a.map(stream_index);
-    });
-}
-
-//Generate some nice data.
-function mockExpenseData() {
-  var options = ['Income', 'Expense'];
-  return stream_layers(2,12,.1).map(function(data, i) {
-    return {
-      key: options[i],
-      values: data
-    };
+  var values = _.chain(data).map(convertDates).groupBy('month').value();
+  return _.map(months, function(month, i){
+    return generateMonthObj(month, _.sum(values[i], 'value'));
   });
 }
 
-//Pie chart example data. Note how there is only a single array of key-value pairs.
-function mockPayeeData() {
-  return  [
-    {
-      "label": "Airline",
-      "value" : 5.1387322875705
-    },
-    {
-      "label": "Cable Company",
-      "value" : 13.925743130903
-    },
-    {
-      "label": "Electric Company",
-      "value" : 98.079782601442
-    },
-    {
-      "label": "Gas Station",
-      "value" : 29.765957771107
-    },
-    {
-      "label": "Phone Company",
-      "value" : 32.807804682612
-    },
-    {
-      "label": "Water Company",
-      "value" : 196.45946739256
-    }
+function formatExpenseRow(row) {
+  return { x: row.date, y: row.value }
+}
+
+function getBarChartData(type, color, groupedData) {
+  return {
+    key: type,
+    color: color,
+    values: generateExpenseReport(groupedData[type])
+  };
+}
+
+//Generate some nice data.
+function getExpenseData(data) {
+  var groupedData = _.groupBy(data, 'type');
+  var expenseData = [
+    getBarChartData('Income','#64DD17', groupedData),
+    getBarChartData('Expense','#D50000', groupedData)
   ];
+  return expenseData;
 }
 
 //Pie chart example data. Note how there is only a single array of key-value pairs.
-function mockCategoryData() {
-  return  [
-    {
-      "label": "Bills",
-      "value" : 95.1387322875705
-    },
-    {
-      "label": "Education",
-      "value" : 13.925743130903
-    },
-    {
-      "label": "Groceries",
-      "value" : 98.079782601442
-    },
-    {
-      "label": "Gas",
-      "value" : 29.765957771107
-    },
-    {
-      "label": "Travel",
-      "value" : 196.45946739256
-    }
-  ];
+function initCharts(callback) {
+  $.ajax({
+    dataType: "json",
+    url: 'json/demoData.json',
+    success: callback
+  });
 }
 
-function drawCharts(){
+function formatRow(value, key){
+  return {
+    "label": key,
+    "value": _.sum(value, 'value')
+  };
+}
+
+function formatData(data, key, type){
+  var formattedData = _.chain(_.groupBy(data,'type')[type]).groupBy(key).map(formatRow).value();
+  return formattedData;
+}
+
+function drawCharts(data){
+
   //Regular pie chart example
   nv.addGraph(function() {
     var chart = nv.models.pieChart()
@@ -99,7 +70,7 @@ function drawCharts(){
         .showLabels(false);
 
       d3.select("#categories svg")
-          .datum(mockCategoryData())
+          .datum(formatData(data.budgetData, 'category', 'Expense'))
           .transition().duration(350)
           .call(chart);
 
@@ -116,7 +87,7 @@ function drawCharts(){
         .showLabels(false);
 
       d3.select("#payees svg")
-          .datum(mockPayeeData())
+          .datum(formatData(data.budgetData, 'payee', 'Expense'))
           .transition().duration(350)
           .call(chart);
 
@@ -139,7 +110,7 @@ function drawCharts(){
         .tickFormat(d3.format(',.2f'));
 
       d3.select("#budgetSummary svg")
-          .datum(mockExpenseData())
+          .datum(getExpenseData(data.budgetData))
           .transition().duration(350)
           .call(chart);
 
@@ -150,5 +121,5 @@ function drawCharts(){
 }
 
 function initPage(){
-  drawCharts();
+  initCharts(drawCharts);
 };

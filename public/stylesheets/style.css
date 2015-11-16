@@ -2,9 +2,13 @@
 body {
   min-width: 320px;
 }
+.row {
+  max-width: none;
+}
 .contain-to-grid,
 .contain-to-grid .top-bar {
   background: #039BE5;
+  max-width: none;
 }
 .contain-to-grid .top-bar .budget-icon {
   margin-right: 5px;

@@ -1,0 +1,260 @@
+{
+  "budgetData": [
+    {
+      "payee": "Airline",
+      "category": "Travel",
+      "type": "Expense",
+      "date": "10/12/2015",
+      "value": 513.87
+    },
+    {
+      "payee": "Airline",
+      "category": "Travel",
+      "type": "Expense",
+      "date": "01/12/2015",
+      "value": 253.33
+    },
+    {
+      "payee": "Cable Company",
+      "category": "Bills",
+      "type": "Expense",
+      "date": "12/01/2015",
+      "value" : 39.25
+    },
+    {
+      "payee": "Cable Company",
+      "category": "Bills",
+      "type": "Expense",
+      "date": "10/01/2015",
+      "value" : 39.25
+    },
+    {
+      "payee": "Cable Company",
+      "category": "Bills",
+      "type": "Expense",
+      "date": "08/01/2015",
+      "value" : 39.25
+    },
+    {
+      "payee": "Cable Company",
+      "category": "Bills",
+      "type": "Expense",
+      "date": "06/01/2015",
+      "value" : 39.25
+    },
+    {
+      "payee": "Cable Company",
+      "category": "Bills",
+      "type": "Expense",
+      "date": "04/01/2015",
+      "value" : 39.25
+    },
+    {
+      "payee": "Cable Company",
+      "category": "Bills",
+      "type": "Expense",
+      "date": "02/01/2015",
+      "value" : 39.25
+    },
+    {
+      "payee": "Electric Company",
+      "category": "Bills",
+      "type": "Expense",
+      "date": "11/01/2015",
+      "value" : 98.07
+    },
+    {
+      "payee": "Electric Company",
+      "category": "Bills",
+      "type": "Expense",
+      "date": "06/01/2015",
+      "value" : 78.07
+    },
+    {
+      "payee": "Electric Company",
+      "category": "Bills",
+      "type": "Expense",
+      "date": "04/01/2015",
+      "value" : 90.07
+    },
+    {
+      "payee": "Electric Company",
+      "category": "Bills",
+      "type": "Expense",
+      "date": "02/01/2015",
+      "value" : 88.07
+    },
+    {
+      "payee": "Gas Station",
+      "category": "Gas",
+      "type": "Expense",
+      "date": "12/12/2015",
+      "value" : 28.76
+    },
+    {
+      "payee": "Gas Station",
+      "category": "Gas",
+      "type": "Expense",
+      "date": "10/12/2015",
+      "value" : 29.76
+    },
+    {
+      "payee": "Gas Station",
+      "category": "Gas",
+      "type": "Expense",
+      "date": "08/12/2015",
+      "value" : 20.76
+    },
+    {
+      "payee": "Gas Station",
+      "category": "Gas",
+      "type": "Expense",
+      "date": "06/12/2015",
+      "value" : 27.76
+    },
+    {
+      "payee": "Gas Station",
+      "category": "Gas",
+      "type": "Expense",
+      "date": "04/12/2015",
+      "value" : 22.76
+    },
+    {
+      "payee": "Gas Station",
+      "category": "Gas",
+      "type": "Expense",
+      "date": "03/12/2015",
+      "value" : 24.76
+    },
+    {
+      "payee": "Phone Company",
+      "category": "Bills",
+      "type": "Expense",
+      "date": "11/12/2015",
+      "value" : 42.80
+    },
+    {
+      "payee": "Phone Company",
+      "category": "Bills",
+      "type": "Expense",
+      "date": "09/12/2015",
+      "value" : 42.80
+    },
+    {
+      "payee": "Phone Company",
+      "category": "Bills",
+      "type": "Expense",
+      "date": "07/12/2015",
+      "value" : 42.80
+    },
+    {
+      "payee": "Phone Company",
+      "category": "Bills",
+      "type": "Expense",
+      "date": "05/12/2015",
+      "value" : 42.80
+    },
+    {
+      "payee": "Phone Company",
+      "category": "Bills",
+      "type": "Expense",
+      "date": "03/12/2015",
+      "value" : 42.80
+    },
+    {
+      "payee": "Phone Company",
+      "category": "Bills",
+      "type": "Expense",
+      "date": "01/12/2015",
+      "value" : 42.80
+    },
+    {
+      "payee": "Water Company",
+      "category": "Bills",
+      "type": "Expense",
+      "date": "12/02/2015",
+      "value" : 96.45
+    },
+    {
+      "payee": "Water Company",
+      "category": "Bills",
+      "type": "Expense",
+      "date": "09/02/2015",
+      "value" : 96.45
+    },
+    {
+      "payee": "Water Company",
+      "category": "Bills",
+      "type": "Expense",
+      "date": "05/02/2015",
+      "value" : 96.45
+    },
+    {
+      "payee": "Water Company",
+      "category": "Bills",
+      "type": "Expense",
+      "date": "01/02/2015",
+      "value" : 96.45
+    },
+    {
+      "type": "Income",
+      "date": "12/05/2015",
+      "value" : 296.45
+    },
+    {
+      "type": "Income",
+      "date": "11/05/2015",
+      "value" : 296.45
+    },
+    {
+      "type": "Income",
+      "date": "10/05/2015",
+      "value" : 296.45
+    },
+    {
+      "type": "Income",
+      "date": "09/05/2015",
+      "value" : 296.45
+    },
+    {
+      "type": "Income",
+      "date": "08/05/2015",
+      "value" : 296.45
+    },
+    {
+      "type": "Income",
+      "date": "07/05/2015",
+      "value" : 296.45
+    },
+    {
+      "type": "Income",
+      "date": "06/05/2015",
+      "value" : 296.45
+    },
+    {
+      "type": "Income",
+      "date": "05/05/2015",
+      "value" : 296.45
+    },
+    {
+      "type": "Income",
+      "date": "04/05/2015",
+      "value" : 296.45
+    },
+    {
+      "type": "Income",
+      "date": "03/05/2015",
+      "value" : 296.45
+    },
+    {
+      "type": "Income",
+      "date": "02/05/2015",
+      "value" : 296.45
+    },
+    {
+      "type": "Income",
+      "date": "01/05/2015",
+      "value" : 296.45
+    }
+  ]
+}
