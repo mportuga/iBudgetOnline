@@ -31,6 +31,9 @@ body {
       font-size: 1rem;
       color: #fff;
 }
+.contain-to-grid .tabs .tab-title h2 [class^="icon-"] {
+  margin-right: 10px;
+}
 /* Summary Page */
 .tile-container {
   border: 1px solid #E0E0E0;
@@ -47,6 +50,10 @@ body {
   padding: 0 10px;
   margin: 0;
 }
+.tile-container .tile-header h3 [class^="icon-"] {
+  font-size: 0.9rem;
+  margin-right: 5px;
+}
 #categories.tile-container {
   border-color: #FF6D00;
 }
@@ -58,6 +65,9 @@ body {
 }
 #payees.tile-container .tile-header {
   background-color: #D50000;
+}
+#payees.tile-container .tile-header h3 [class^="icon-"] {
+  font-size: 0.75rem;
 }
 #budgetSummary.tile-container {
   border-color: #6200EA;
