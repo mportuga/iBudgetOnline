@@ -1,6 +1,7 @@
 /* Layout Styles */
 body {
   min-width: 320px;
+  background-color: #f5f5f5;
 }
 .row {
   max-width: none;
@@ -36,8 +37,10 @@ body {
 }
 /* Summary Page */
 .tile-container {
+  background-color: #fff;
   border: 1px solid #E0E0E0;
   margin: 10px 0;
+  box-shadow: 3px 3px 5px #9E9E9E;
 }
 .tile-container .tile-header {
   background-color: #E0E0E0;
