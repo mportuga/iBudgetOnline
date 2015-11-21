@@ -20,7 +20,7 @@ function drawPieChart(data, selector){
 function drawMultiBarChart(data, selector){
   nv.addGraph(function createMultiBarChart() {
     var chart = nv.models.multiBarChart()
-      .reduceXTicks(false)   //If 'false', every single x-axis tick label will be rendered.
+      .reduceXTicks($(window).width() < 640)   //If 'false', every single x-axis tick label will be rendered.
       .rotateLabels(0)      //Angle to rotate x-axis labels.
       .showControls(false)   //Allow user to switch between 'Grouped' and 'Stacked' mode.
       .groupSpacing(0.1)    //Distance between each group of bars.
@@ -34,7 +34,14 @@ function drawMultiBarChart(data, selector){
         .transition().duration(350)
         .call(chart);
 
-    nv.utils.windowResize(chart.update);
+    nv.utils.windowResize(function(){
+      if($(window).width() < 640){
+        chart.reduceXTicks(true);
+      } else {
+        chart.reduceXTicks(false);
+      }
+      chart.update();
+    });
 
     return chart;
   });
