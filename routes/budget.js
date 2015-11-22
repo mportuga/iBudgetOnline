@@ -57,6 +57,44 @@ function formatData(data, key, type){
   return formattedData;
 }
 
+function getColumnData(row, column) {
+  var data = "";
+  switch(column) {
+    case "debt":
+      if(row.type === "Expense") {
+        data = row.value;
+      }
+      break;
+    case "credit":
+      if(row.type === "Income") {
+        data = row.value;
+      }
+      break;
+    case "status":
+    case "balance":
+      break;
+    default:
+      data = row[column];
+  };
+  return data;
+}
+
+function getRowData(row, columns) {
+  var rowData = _.map(columns, function(column){
+    return getColumnData(row, column);
+  });
+  return rowData
+}
+
+function formatDataForGrid(data, columns){
+  var formattedData = {
+    data: _.map(data, function(rowData){
+      return getRowData(rowData, columns);
+    })
+  };
+  return formattedData;
+}
+
 /* GET budget data. */
 router.get('/get', function(req, res, next) {
   if(req.query) {
@@ -64,12 +102,15 @@ router.get('/get', function(req, res, next) {
       if(err){
         console.error(err);
       } else {
-        switch(req.query.chartType) {
+        switch(req.query.dataType) {
           case 'pie':
-            data = formatData(data.budgetData, req.query.column, req.query.dataType);
+            data = formatData(data.budgetData, req.query.column, req.query.budgetType);
             break;
           case 'multiBar':
             data = getExpenseData(data.budgetData);
+            break;
+          case 'grid':
+            data = formatDataForGrid(data.budgetData, req.query.columns);
             break;
         }
         res.send(data);

@@ -26,6 +26,18 @@ block content
             li
               a(href='#') Demo Credit
                 span(class='balance right') $0.00
+    div(class='small-12 medium-8 columns')
+      table(id="accountsTable", class="hover")
+        thead
+          tr
+            th Data
+            th Payee
+            th(class="hide-for-small-only") Status
+            th Debt
+            th Credit
+            th(class="hide-for-small-only") Balance
+        tbody
+
 
 block scripts
   script(src='javascripts/accounts.js')

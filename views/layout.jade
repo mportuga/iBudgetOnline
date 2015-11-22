@@ -4,8 +4,9 @@ html
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     title= title
-    link(rel='stylesheet', href='/stylesheets/foundation.min.css')
-    link(rel='stylesheet', href='/stylesheets/nv.d3.min.css')
+    link(rel='stylesheet', href='/stylesheets/vendor/jquery.dataTables.css')
+    link(rel='stylesheet', href='/stylesheets/vendor/foundation.min.css')
+    link(rel='stylesheet', href='/stylesheets/vendor/nv.d3.min.css')
     link(rel='stylesheet', href='/stylesheets/icons.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
     script(src='javascripts/vendor/modernizr.js')
@@ -37,6 +38,7 @@ html
     main(role='main')
       block content
     script(src='javascripts/vendor/jquery.js')
+    script(src='javascripts/vendor/jquery.dataTables.js')
     script(src='javascripts/vendor/lodash.js')
     script(src='javascripts/foundation/foundation.js')
     block scripts

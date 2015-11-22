@@ -58,13 +58,13 @@ function initChart(selector, queryParams, callback){
 }
 
 function getPieExpenseParams(column) {
-  return { chartType: 'pie', column: column, dataType:'Expense'};
+  return { dataType: 'pie', column: column, budgetType:'Expense'};
 }
 
 function initCharts() {
   initChart("#categories svg", getPieExpenseParams('category'), drawPieChart);
   initChart("#payees svg", getPieExpenseParams('payee'), drawPieChart);
-  initChart("#budgetSummary svg", { chartType: 'multiBar' }, drawMultiBarChart);
+  initChart("#budgetSummary svg", { dataType: 'multiBar' }, drawMultiBarChart);
 }
 
 function initPage(){
