@@ -23,6 +23,7 @@ body {
 }
 .contain-to-grid .tabs .tab-title > a {
   background-color: #222;
+  padding: 1rem 0;
 }
 .contain-to-grid .tabs .tab-title > a:hover,
 .contain-to-grid .tabs .tab-title.active > a {
@@ -31,9 +32,18 @@ body {
 .contain-to-grid .tabs .tab-title h2 {
       font-size: 1rem;
       color: #fff;
+      text-align: center;
 }
 .contain-to-grid .tabs .tab-title h2 [class^="icon-"] {
   margin-right: 10px;
+}
+@media (min-width=480px) {
+  .contain-to-grid .tabs .tab-title > a {
+    padding: 1rem 2rem;
+  }
+  .contain-to-grid .tabs .tab-title h2 {
+        text-align: left;
+  }
 }
 /* Summary Page */
 .tile-container {
