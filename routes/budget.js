@@ -70,6 +70,13 @@ function getColumnData(row, column) {
         data = row.value;
       }
       break;
+    case "amount":
+      if(row.type === "Income") {
+        data = row.value;
+      } else if(row.type === "Expense") {
+        data = '-' + row.value;
+      }
+      break;
     case "status":
     case "balance":
       break;

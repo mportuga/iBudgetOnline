@@ -97,3 +97,14 @@ body {
 .side-nav > .side-nav {
   padding: 0;
 }
+#accountsTable {
+  width: 100% !important;
+  overflow: auto;
+}
+
+@media only screen and (min-width: 64.0625em) {
+  th.hide-for-large-only,
+  td.hide-for-large-only {
+    display: none !important;
+  }
+}
