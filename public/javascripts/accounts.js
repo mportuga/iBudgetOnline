@@ -4,16 +4,18 @@ function getTableOptions(){
       url: "/budget/data/get",
       data: {
         dataType: 'grid',
-        columns: [ "date", "payee", "status", "debt", "credit", "balance"]
+        columns: [ "date", "payee", "status", "debt", "credit", "amount", "balance"]
       }
     },
+    fullWidthRow: true,
     columns: [
       null,
       null,
       { className: "hide-for-small-only"},
-      null,
-      null,
-      { className: "hide-for-small-only"}
+      { className: "show-for-large-only"},
+      { className: "show-for-large-only"},
+      { className: "hide-for-large-only"},
+      { className: "show-for-medium"}
     ]
   };
 }
