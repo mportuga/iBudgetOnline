@@ -1,0 +1,1 @@
+define(["jquery","accounts","budget","summary","foundation"],function(a,b,c,d){"use strict";a(document).foundation().ready(function(){var c=window.location.pathname;switch(a("#appNav li[data-path='"+c+"']").addClass("active"),c.substring(1,c.length)){case"accounts":b&&b.initPage&&b.initPage();break;case"budget":break;case"summary":d&&d.initPage&&d.initPage()}})});

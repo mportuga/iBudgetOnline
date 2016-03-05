@@ -1,0 +1,1 @@
+define([],function(){function a(){}return{initPage:a}});

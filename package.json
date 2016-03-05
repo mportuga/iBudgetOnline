@@ -6,6 +6,8 @@
     "start": "node ./bin/www"
   },
   "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-uglify": "^1.0.0",
     "less": "^2.6.1"
   },
   "dependencies": {
@@ -19,6 +21,7 @@
     "lodash": "^3.10.1",
     "morgan": "~1.6.1",
     "nvd3": "^1.8.1",
+    "requirejs": "^2.1.22",
     "serve-favicon": "~2.3.0"
   },
   "repository": "https://github.com/mportuga/iBudgetOnline",
