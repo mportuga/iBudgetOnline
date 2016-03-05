@@ -1,7 +1,1 @@
-define([], function budgetPage(){
-  function initPage(){}
-
-  return {
-    initPage: initPage
-  };
-});
+define([],function(){function a(){}return{initPage:a}});

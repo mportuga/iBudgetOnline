@@ -6,6 +6,8 @@
     "start": "node ./bin/www"
   },
   "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-uglify": "^1.0.0",
     "less": "^2.6.1"
   },
   "dependencies": {
