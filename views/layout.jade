@@ -11,6 +11,12 @@ html
     link(rel='stylesheet', href='/stylesheets/icons.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
     script(src='javascripts/vendor/modernizr.js')
+    script(src='javascripts/vendor/jquery.js')
+    script(src='javascripts/vendor/jquery.dataTables.js')
+    script(src='javascripts/vendor/lodash.js')
+    script(src='javascripts/foundation/foundation.js')
+    block scripts
+    script(src='javascripts/main.js')
   body
     div(class='contain-to-grid sticky')
       nav(class='top-bar', data-topbar, role='navigation')
@@ -38,9 +44,3 @@ html
               span Budget
     main(role='main')
       block content
-    script(src='javascripts/vendor/jquery.js')
-    script(src='javascripts/vendor/jquery.dataTables.js')
-    script(src='javascripts/vendor/lodash.js')
-    script(src='javascripts/foundation/foundation.js')
-    block scripts
-    script(src='javascripts/main.js')
