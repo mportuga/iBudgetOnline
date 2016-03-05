@@ -5,17 +5,11 @@ html
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     meta(name="apple-mobile-web-app-capable", content="yes")
     title= title
-    link(rel='stylesheet', href='/stylesheets/vendor/jquery.dataTables.css')
-    link(rel='stylesheet', href='/stylesheets/vendor/foundation.min.css')
-    link(rel='stylesheet', href='/stylesheets/vendor/nv.d3.min.css')
-    link(rel='stylesheet', href='/stylesheets/main.css')
-    script(src='javascripts/vendor/modernizr.js')
-    script(src='javascripts/vendor/jquery.js')
-    script(src='javascripts/vendor/jquery.dataTables.js')
-    script(src='javascripts/vendor/lodash.js')
-    script(src='javascripts/foundation/foundation.js')
-    block scripts
-    script(src='javascripts/main.js')
+    link(rel='stylesheet', href='/css/vendor/jquery.dataTables.css')
+    link(rel='stylesheet', href='/css/vendor/foundation.min.css')
+    link(rel='stylesheet', href='/css/vendor/nv.d3.min.css')
+    link(rel='stylesheet', href='/css/main.css')
+    script(data-main="js/require-config", src="js/vendor/require.js")
   body
     div(class='contain-to-grid sticky')
       nav(class='top-bar', data-topbar, role='navigation')
