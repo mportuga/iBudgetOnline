@@ -1,0 +1,110 @@
+/* Layout Styles */
+body {
+  min-width: 320px;
+  background-color: #f5f5f5;
+}
+.row {
+  max-width: none;
+}
+.contain-to-grid,
+.contain-to-grid .top-bar {
+  background: #039BE5;
+  max-width: none;
+}
+.contain-to-grid .top-bar .budget-icon {
+  margin-right: 5px;
+  height: 35px;
+}
+.contain-to-grid .top-bar .name h1 a {
+  font-weight: bold;
+}
+.contain-to-grid .tabs .tab-title {
+  width: 33.333%;
+}
+.contain-to-grid .tabs .tab-title > a {
+  background-color: #222;
+  padding: 1rem 0;
+}
+.contain-to-grid .tabs .tab-title > a:hover,
+.contain-to-grid .tabs .tab-title.active > a {
+  background-color: #090909;
+}
+.contain-to-grid .tabs .tab-title h2 {
+      font-size: 1rem;
+      color: #fff;
+      text-align: center;
+}
+.contain-to-grid .tabs .tab-title h2 [class^="icon-"] {
+  margin-right: 10px;
+}
+@media screen and (min-width: 480px) {
+  .contain-to-grid .tabs .tab-title > a {
+    padding: 1rem 2rem;
+  }
+  .contain-to-grid .tabs .tab-title h2 {
+        text-align: left;
+  }
+}
+/* Summary Page */
+.tile-container {
+  background-color: #fff;
+  border: 1px solid #E0E0E0;
+  margin: 10px 0;
+  box-shadow: 3px 3px 5px #9E9E9E;
+}
+.tile-container .tile-header {
+  background-color: #E0E0E0;
+  height: 30px;
+}
+.tile-container .tile-header h3 {
+  color: #fff;
+  font-size: 1rem;
+  line-height: 30px;
+  padding: 0 10px;
+  margin: 0;
+}
+.tile-container .tile-header h3 [class^="icon-"] {
+  font-size: 0.9rem;
+  margin-right: 5px;
+}
+#categories.tile-container {
+  border-color: #FF6D00;
+}
+#categories.tile-container .tile-header {
+  background-color: #FF6D00;
+}
+#payees.tile-container {
+  border-color: #D50000;
+}
+#payees.tile-container .tile-header {
+  background-color: #D50000;
+}
+#payees.tile-container .tile-header h3 [class^="icon-"] {
+  font-size: 0.75rem;
+}
+#budgetSummary.tile-container {
+  border-color: #6200EA;
+}
+#budgetSummary.tile-container .tile-header {
+  background-color: #6200EA;
+}
+/* Accounts Page */
+.side-nav .title > h3 {
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.side-nav > .side-nav {
+  padding: 0;
+}
+#accountsTable {
+  width: 100% !important;
+  overflow: auto;
+}
+
+@media only screen and (min-width: 64.0625em) {
+  th.hide-for-large-only,
+  td.hide-for-large-only {
+    display: none !important;
+  }
+}
