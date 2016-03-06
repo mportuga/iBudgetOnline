@@ -3,6 +3,7 @@ define([
   'd3',
   'nvd3'
 ], function summaryPage($) {
+  'use strict';
 
   function drawPieChart(data, selector){
     //Regular pie chart example
