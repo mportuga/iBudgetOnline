@@ -2,6 +2,8 @@ define([
   'jquery',
   'jqueryDataTables'
 ], function accountsPage($) {
+  'use strict';
+  
   function getTableOptions(){
     return {
       ajax: {
