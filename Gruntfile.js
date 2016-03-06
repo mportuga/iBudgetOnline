@@ -3,6 +3,19 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+    less: {
+      production: {
+        options: {
+          paths: ["public/css"],
+          plugins: [
+            new (require('less-plugin-clean-css'))()
+          ],
+        },
+        files: {
+          "public/css/main.css": "src/less/main.less"
+        }
+      }
+    },
     uglify: {
       my_target: {
         files: [
@@ -40,14 +53,14 @@ module.exports = function(grunt) {
     }
   });
 
-  // Load the plugin that provides the "uglify" task.
+  // Load all grunt plugins
   grunt.loadNpmTasks('grunt-contrib-uglify');
-
-  // Load the plugin that provides the "requirejs" task.
   grunt.loadNpmTasks('grunt-contrib-requirejs');
+  grunt.loadNpmTasks('grunt-contrib-less');
 
   // Default task(s).
   grunt.registerTask('default', [
+    'less',
     'uglify',
     'requirejs'
   ]);
