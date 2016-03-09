@@ -60,16 +60,6 @@ function formatData(data, key, type){
 function getColumnData(row, column) {
   var data = "";
   switch(column) {
-    case "debt":
-      if(row.type === "Expense") {
-        data = row.value;
-      }
-      break;
-    case "credit":
-      if(row.type === "Income") {
-        data = row.value;
-      }
-      break;
     case "amount":
       if(row.type === "Income") {
         data = row.value;

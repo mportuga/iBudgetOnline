@@ -3,14 +3,14 @@ define([
   'jqueryDataTables'
 ], function accountsPage($) {
   'use strict';
-  
+
   function getTableOptions(){
     return {
       ajax: {
         url: "/budget/data/get",
         data: {
           dataType: 'grid',
-          columns: [ "date", "payee", "status", "debt", "credit", "amount", "balance"]
+          columns: [ "date", "payee", "status", "amount", "balance"]
         }
       },
       fullWidthRow: true,
@@ -18,9 +18,7 @@ define([
         null,
         null,
         { className: "hide-for-small-only"},
-        { className: "show-for-large-only"},
-        { className: "show-for-large-only"},
-        { className: "hide-for-large-only"},
+        null,
         { className: "show-for-medium"}
       ]
     };
