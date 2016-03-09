@@ -37,34 +37,26 @@ body {
 .contain-to-grid .tabs .tab-title h2 [class^="icon-"] {
   margin-right: 10px;
 }
-@media screen and (min-width: 480px) {
-  .contain-to-grid .tabs .tab-title > a {
-    padding: 1rem 2rem;
-  }
-  .contain-to-grid .tabs .tab-title h2 {
-        text-align: left;
-  }
-}
 /* Summary Page */
 .tile-container {
   background-color: @content-bg;
   border: 1px solid @default-accent-bg;
   margin: 10px 0;
   box-shadow: 3px 3px 5px @shadow-color;
-}
-.tile-container .tile-header {
-  background-color: @default-accent-bg;
-  height: 30px;
-}
-.tile-container .tile-header h3 {
-  color: @text-contrast-color;
-  font-size: 1rem;
-  line-height: 30px;
-  padding: 0 10px;
-  margin: 0;
-  [class^="icon-"] {
-    font-size: 0.9rem;
-    margin-right: 5px;
+  .tile-header {
+    background-color: @default-accent-bg;
+    height: 30px;
+    h3 {
+      color: @text-contrast-color;
+      font-size: 1rem;
+      line-height: 30px;
+      padding: 0 10px;
+      margin: 0;
+      [class^="icon-"] {
+        font-size: 0.9rem;
+        margin-right: 5px;
+      }
+    }
   }
 }
 #categories.tile-container {
@@ -100,11 +92,4 @@ body {
 #accountsTable {
   width: 100% !important;
   overflow: auto;
-}
-
-@media only screen and (min-width: 64.0625em) {
-  th.hide-for-large-only,
-  td.hide-for-large-only {
-    display: none !important;
-  }
 }
