@@ -62,31 +62,31 @@ body {
   line-height: 30px;
   padding: 0 10px;
   margin: 0;
-}
-.tile-container .tile-header h3 [class^="icon-"] {
-  font-size: 0.9rem;
-  margin-right: 5px;
+  [class^="icon-"] {
+    font-size: 0.9rem;
+    margin-right: 5px;
+  }
 }
 #categories.tile-container {
   border-color: @orange-base;
-}
-#categories.tile-container .tile-header {
-  background-color: @orange-base;
+  .tile-header {
+    background-color: @orange-base;
+  }
 }
 #payees.tile-container {
   border-color: @red-base;
-}
-#payees.tile-container .tile-header {
-  background-color: @red-base;
-}
-#payees.tile-container .tile-header h3 [class^="icon-"] {
-  font-size: 0.75rem;
+  .tile-header {
+    background-color: @red-base;
+    h3 [class^="icon-"] {
+      font-size: 0.75rem;
+    }
+  }
 }
 #budgetSummary.tile-container {
   border-color: @purple-base;
-}
-#budgetSummary.tile-container .tile-header {
-  background-color: @purple-base;
+  .tile-header {
+    background-color: @purple-base;
+  }
 }
 /* Accounts Page */
 .side-nav .title > h3 {
