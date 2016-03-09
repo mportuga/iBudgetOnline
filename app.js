@@ -18,6 +18,9 @@ app.set('view engine', 'jade');
 // Enables gzip compression
 app.use(compression());
 
+// Enables browser caching
+app.use(express.static(__dirname + '/public', { maxAge: 86400000 }));
+
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
